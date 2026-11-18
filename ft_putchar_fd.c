@@ -1,12 +1,9 @@
 #include "ft_printf.h"
 
-int	ft_putchar(char c, int fd)
+int	ft_putchar(char c)
 {
-    int compteur;
-
-    compteur = 0;
-    write (fd, &c, 1);
-    compteur++;
+    write (1, &c, 1);
+    return (1);
 }
 
 /*int main(void)
