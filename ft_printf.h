@@ -6,7 +6,7 @@
 /*   By: batokarz <batokarz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 11:12:39 by batokarz          #+#    #+#             */
-/*   Updated: 2026/11/23 11:17:46 by batokarz         ###   ########.fr       */
+/*   Updated: 2026/11/24 10:55:37 by batokarz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <stdarg.h>
 # include <unistd.h>
 
-size_t	ft_strlen(const char *s);
 int		ft_putstr(char *s);
 int		ft_putchar(char c);
 int		ft_putnbr(int n);

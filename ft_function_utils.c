@@ -6,21 +6,11 @@
 /*   By: batokarz <batokarz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 11:12:17 by batokarz          #+#    #+#             */
-/*   Updated: 2026/11/23 11:14:17 by batokarz         ###   ########.fr       */
+/*   Updated: 2026/11/24 10:55:15 by batokarz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
 
 int	ft_putchar(char c)
 {
@@ -50,7 +40,6 @@ int	ft_putnbr(int n)
 {
 	long	nb;
 	int		compteur;
-	long	ar;
 	char	c;
 
 	nb = n;
@@ -62,15 +51,10 @@ int	ft_putnbr(int n)
 		nb = -nb;
 	}
 	if (nb > 9)
-		ft_putnbr(nb / 10);
-	ar = nb;
-	while (ar > 0)
-	{
-		ar = ar / 10;
-		compteur++;
-	}
+		compteur += ft_putnbr(nb / 10);
 	c = '0' + (nb % 10);
 	write(1, &c, 1);
+	compteur++;
 	return (compteur);
 }
 

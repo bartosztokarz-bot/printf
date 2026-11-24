@@ -6,7 +6,7 @@
 /*   By: batokarz <batokarz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 11:12:23 by batokarz          #+#    #+#             */
-/*   Updated: 2026/11/23 11:12:24 by batokarz         ###   ########.fr       */
+/*   Updated: 2026/11/23 14:53:46 by batokarz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_printf(const char *format, ...)
 	int		i;
 	int		count;
 
+	if (!format)
+		return (-1);
 	va_start(args, format);
 	i = 0;
 	count = 0;
